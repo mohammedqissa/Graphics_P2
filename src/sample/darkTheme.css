@@ -1,0 +1,22 @@
+.check-box>.box {
+  -fx-background-insets: 0;
+  -fx-background-radius: 3px;
+  -fx-border-color:black;
+  -fx-font-size: 32;
+
+  -fx-background-color: white;
+}
+
+.check-box>.box>.mark {
+  -fx-background-image: url("file:/Users/mohammedissa/Dropbox/workspace/Graphics_P2/src/sample/draw.png");
+  -fx-background-position: center;
+  -fx-background-repeat: stretch;
+  -fx-shape: none;
+}
+
+.check-box:selected>.box>.mark{
+  -fx-background-color: transparent;
+  -fx-background-image: url("file:/Users/mohammedissa/Dropbox/workspace/Graphics_P2/src/sample/erase.png");
+
+
+}

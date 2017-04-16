@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="264.0" fitWidth="264.0" layoutX="22.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background_fontCreator.png" />
+         </image></ImageView>
+      
+      <Canvas fx:id="drawArea" height="264.0" layoutX="22.0" layoutY="45.0" onMouseClicked="#print" onMouseDragged="#print" onMouseEntered="#cursor" width="264.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Canvas>
+      <ListView fx:id="listView" layoutX="395.0" layoutY="17.0" onMouseClicked="#listChange" prefHeight="270.0" prefWidth="95.0" />
+      <Button layoutX="397.0" layoutY="294.0" mnemonicParsing="false" onAction="#newLetter" prefHeight="25.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="445.0" layoutY="294.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@minus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="fontLabelname" layoutX="22.0" layoutY="17.0" prefHeight="24.0" prefWidth="264.0" text="Font Name" />
+      <RadioButton fx:id="rb1" layoutX="295.0" layoutY="45.0" mnemonicParsing="false" onAction="#radioChange" text="Case 1" />
+      <RadioButton fx:id="rb2" layoutX="294.0" layoutY="87.0" mnemonicParsing="false" onAction="#radioChange" text="Case 2" />
+      <RadioButton fx:id="rb3" layoutX="294.0" layoutY="127.0" mnemonicParsing="false" onAction="#radioChange" text="Case 3" />
+      <Button layoutX="22.0" layoutY="318.0" mnemonicParsing="false" onAction="#thump" prefHeight="25.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fx:id="thumpImage" fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@thumbs-down-hand.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeB" layoutX="390.0" layoutY="419.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="31.0" prefWidth="100.0" text="Close">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="save" layoutX="261.0" layoutY="419.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="100.0" text="Save">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="151.0" layoutY="316.0" mnemonicParsing="false" onAction="#clear" prefHeight="39.0" prefWidth="84.0" text="Clear">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@two-circling-arrows.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="243.0" layoutY="316.0" mnemonicParsing="false" onAction="#retur" prefHeight="39.0" prefWidth="43.0">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@backup.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="keyT" disable="true" layoutX="393.0" layoutY="340.0" onKeyTyped="#key" onMouseClicked="#key" prefHeight="27.0" prefWidth="95.0" promptText="Letter Key" />
+      <Label fx:id="label" layoutX="22.0" layoutY="364.0" prefHeight="27.0" prefWidth="167.0" visible="false" />
+      <CheckBox fx:id="rtl" layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Left To Right Font" />
+      <CheckBox fx:id="erase" layoutX="98.0" layoutY="313.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-border-width: 40px;" stylesheets="@darkTheme.css" />
+
+
+
+
+
+   </children>
+</AnchorPane>

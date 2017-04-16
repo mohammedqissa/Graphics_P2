@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="647.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#languages" text="Languages" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="imageView" fitHeight="690.0" fitWidth="496.0" layoutX="77.0" layoutY="91.0" onKeyTyped="#type" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@paper.png" />
+         </image></ImageView>
+      <ComboBox fx:id="comboBox" layoutX="77.0" layoutY="51.0" onAction="#comboChange" prefWidth="150.0" promptText="font" />
+      <CheckBox fx:id="bold" layoutX="324.0" layoutY="57.0" mnemonicParsing="false" text="BOLD">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></CheckBox>
+      <Button fx:id="color" layoutX="495.0" layoutY="51.0" mnemonicParsing="false" onAction="#color" text="Color" />
+      <Canvas fx:id="canvas" focusTraversable="true" height="690.0" layoutX="77.0" layoutY="112.0" onInputMethodTextChanged="#type" onKeyPressed="#type" onKeyReleased="#type" onKeyTyped="#type" onMouseClicked="#type" width="483.0" />
+      <TextField fx:id="textField" layoutX="14.0" layoutY="68.0" onKeyTyped="#type" visible="false" />
+      <CheckBox fx:id="underLined1" layoutX="242.0" layoutY="59.0" mnemonicParsing="false" text="ULined" underline="true" />
+
+
+
+
+
+   </children>
+</AnchorPane>
